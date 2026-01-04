@@ -35,7 +35,7 @@ input_data = np.array([[experience, age]])
 # Load trained model
 @st.cache_resource
 def load_model():
-    with open("model.pkl", "rb") as file:
+    with open("model.pkl", "wb") as file:
         model = pickle.load(file)
     return model
 
@@ -48,3 +48,4 @@ if st.button("🔮 Predict Salary"):
 
 st.divider()
 st.caption("Made with ❤️ using Streamlit")
+
